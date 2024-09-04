@@ -7,11 +7,15 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::login');
 $routes->get('register', 'Home::register');
+$routes->get('logout', 'Home::logout');
 $routes->post('authentificationRegister', 'Home::authentificationRegister');
 $routes->post('authentificationLogin', 'Home::authentificationLogin');
 
 
-$routes->get("Dashbord", 'Dashbord::index');
+// $routes->get("Dashbord", 'Dashbord::index');
+
+
+$routes->get('books', 'books::index');
 
 
 

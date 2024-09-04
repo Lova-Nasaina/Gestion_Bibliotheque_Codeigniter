@@ -26,7 +26,7 @@ class Home extends BaseController
             if ($userInfo["password"] === $user["password"]){
                 session()->set("LoggedTrue", true);
                 session()->set("userData", $user);
-                return redirect()->to("Dashbord");
+                return redirect()->to("books");
             }
         }else{
             session()->setFlashdata("error", "email ou password incorrect");
@@ -69,7 +69,13 @@ class Home extends BaseController
             session()->setFlashdata("error", "password non identique");
             return redirect()->to("register");
         }
-        
+    }
+
+    
+    public function logout()
+    {
+        session()->destroy();
+        return redirect()->to('/');
     }
 
     // public function HomePage() : string
@@ -142,10 +148,5 @@ class Home extends BaseController
     // }
 
 
-    public function logout()
-    {
-        session()->destroy();
-        return redirect()->to('/');
-    }
 
 }
