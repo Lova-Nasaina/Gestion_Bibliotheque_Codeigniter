@@ -1,0 +1,967 @@
+CRITICAL - 2024-09-02 11:49:17 --> Error: Class "App\UserModel\UserModel" not found
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+ERROR - 2024-09-02 12:01:18 --> mysqli_sql_exception: La table 'gestion_etudiant.users' n'existe pas in C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\app\Controllers\Home.php(24): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(933): App\Controllers\Home->insertion()
+#9 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\rewrite.php(44): require_once('C:\\wamp64\\www\\c...')
+#15 {main}
+CRITICAL - 2024-09-02 12:01:18 --> CodeIgniter\Database\Exceptions\DatabaseException: La table 'gestion_etudiant.users' n'existe pas
+[Method: POST, Route: ajout]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`) VALUES (:name:, :email:, :password:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Home.php(24): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 12:01:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: La table 'gestion_etudiant.users' n'existe pas
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `password`) VALUES (\'\', \'\', \'\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `password`) VALUES (\'\', \'\', \'\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`) VALUES (:name:, :email:, :password:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Home.php(24): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 12:01:18 --> [Caused by] mysqli_sql_exception: La table 'gestion_etudiant.users' n'existe pas
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `users` (`name`, `email`, `password`) VALUES (\'\', \'\', \'\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `password`) VALUES (\'\', \'\', \'\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `password`) VALUES (\'\', \'\', \'\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`) VALUES (:name:, :email:, :password:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Home.php(24): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+ERROR - 2024-09-02 12:02:32 --> mysqli_sql_exception: La table 'gestion_etudiant.users' n'existe pas in C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\app\Controllers\Home.php(24): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(933): App\Controllers\Home->insertion()
+#9 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\rewrite.php(44): require_once('C:\\wamp64\\www\\c...')
+#15 {main}
+CRITICAL - 2024-09-02 12:02:32 --> CodeIgniter\Database\Exceptions\DatabaseException: La table 'gestion_etudiant.users' n'existe pas
+[Method: POST, Route: ajout]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`) VALUES (:name:, :email:, :password:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Home.php(24): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 12:02:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: La table 'gestion_etudiant.users' n'existe pas
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `password`) VALUES (\'nas\', \'nas@gmail.com\', \'azerty\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `password`) VALUES (\'nas\', \'nas@gmail.com\', \'azerty\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`) VALUES (:name:, :email:, :password:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Home.php(24): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 12:02:33 --> [Caused by] mysqli_sql_exception: La table 'gestion_etudiant.users' n'existe pas
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `users` (`name`, `email`, `password`) VALUES (\'nas\', \'nas@gmail.com\', \'azerty\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `password`) VALUES (\'nas\', \'nas@gmail.com\', \'azerty\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `password`) VALUES (\'nas\', \'nas@gmail.com\', \'azerty\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`) VALUES (:name:, :email:, :password:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Home.php(24): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 12:42:54 --> ErrorException: Attempt to read property "password" on array
+[Method: POST, Route: login]
+in APPPATH\Controllers\Home.php on line 46.
+ 1 APPPATH\Controllers\Home.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "password" on array', 'C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\app\\Controllers\\Home.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->authetification()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 12:48:46 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\Home.php on line 45.
+ 1 APPPATH\Controllers\Home.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\app\\Controllers\\Home.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->authetification()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 12:49:09 --> ErrorException: Attempt to read property "password" on array
+[Method: POST, Route: login]
+in APPPATH\Controllers\Home.php on line 47.
+ 1 APPPATH\Controllers\Home.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "password" on array', 'C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\app\\Controllers\\Home.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->authetification()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+INFO - 2024-09-02 12:57:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 12:59:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 13:08:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 13:14:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 13:16:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 13:16:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 13:16:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-02 13:16:17 --> Error: Object of class stdClass could not be converted to string
+[Method: GET, Route: /]
+in APPPATH\Views\loginPage\login.php on line 30.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('loginPage/login', [], true)
+ 4 APPPATH\Controllers\Home.php(11): view('loginPage/login')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+INFO - 2024-09-02 13:20:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 13:20:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 13:20:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 13:20:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 13:20:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 13:31:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 13:31:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 13:32:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 13:36:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-02 13:36:22 --> mysqli_sql_exception: Champ 'created_at' inconnu dans field list in C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\app\Controllers\Home.php(30): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(933): App\Controllers\Home->insertion()
+#9 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\rewrite.php(44): require_once('C:\\wamp64\\www\\c...')
+#15 {main}
+CRITICAL - 2024-09-02 13:36:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Champ 'created_at' inconnu dans field list
+[Method: POST, Route: ajout]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Home.php(30): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 13:36:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Champ 'created_at' inconnu dans field list
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:36:22\', \'2024-09-02 13:36:22\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:36:22\', \'2024-09-02 13:36:22\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Home.php(30): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 13:36:22 --> [Caused by] mysqli_sql_exception: Champ 'created_at' inconnu dans field list
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:36:22\', \'2024-09-02 13:36:22\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:36:22\', \'2024-09-02 13:36:22\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:36:22\', \'2024-09-02 13:36:22\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Home.php(30): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+ERROR - 2024-09-02 13:38:51 --> mysqli_sql_exception: Champ 'created_at' inconnu dans field list in C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\app\Controllers\Home.php(30): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(933): App\Controllers\Home->insertion()
+#9 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\rewrite.php(44): require_once('C:\\wamp64\\www\\c...')
+#15 {main}
+CRITICAL - 2024-09-02 13:38:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Champ 'created_at' inconnu dans field list
+[Method: POST, Route: ajout]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Home.php(30): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 13:38:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Champ 'created_at' inconnu dans field list
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:38:51\', \'2024-09-02 13:38:51\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:38:51\', \'2024-09-02 13:38:51\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Home.php(30): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 13:38:51 --> [Caused by] mysqli_sql_exception: Champ 'created_at' inconnu dans field list
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:38:51\', \'2024-09-02 13:38:51\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:38:51\', \'2024-09-02 13:38:51\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:38:51\', \'2024-09-02 13:38:51\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Home.php(30): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+INFO - 2024-09-02 13:38:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-02 13:39:05 --> mysqli_sql_exception: Champ 'created_at' inconnu dans field list in C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\app\Controllers\Home.php(30): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(933): App\Controllers\Home->insertion()
+#9 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\rewrite.php(44): require_once('C:\\wamp64\\www\\c...')
+#15 {main}
+CRITICAL - 2024-09-02 13:39:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Champ 'created_at' inconnu dans field list
+[Method: POST, Route: ajout]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Home.php(30): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 13:39:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Champ 'created_at' inconnu dans field list
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:39:05\', \'2024-09-02 13:39:05\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:39:05\', \'2024-09-02 13:39:05\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Home.php(30): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 13:39:05 --> [Caused by] mysqli_sql_exception: Champ 'created_at' inconnu dans field list
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:39:05\', \'2024-09-02 13:39:05\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:39:05\', \'2024-09-02 13:39:05\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:39:05\', \'2024-09-02 13:39:05\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Home.php(30): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+INFO - 2024-09-02 13:39:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-02 13:39:54 --> mysqli_sql_exception: Champ 'created_at' inconnu dans field list in C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\app\Controllers\Home.php(30): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(933): App\Controllers\Home->insertion()
+#9 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\rewrite.php(44): require_once('C:\\wamp64\\www\\c...')
+#15 {main}
+CRITICAL - 2024-09-02 13:39:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Champ 'created_at' inconnu dans field list
+[Method: POST, Route: ajout]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Home.php(30): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 13:39:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Champ 'created_at' inconnu dans field list
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:39:54\', \'2024-09-02 13:39:54\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:39:54\', \'2024-09-02 13:39:54\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Home.php(30): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 13:39:54 --> [Caused by] mysqli_sql_exception: Champ 'created_at' inconnu dans field list
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:39:54\', \'2024-09-02 13:39:54\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:39:54\', \'2024-09-02 13:39:54\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:39:54\', \'2024-09-02 13:39:54\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Home.php(30): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+ERROR - 2024-09-02 13:41:46 --> mysqli_sql_exception: Champ 'created_at' inconnu dans field list in C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\app\Controllers\Home.php(30): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(933): App\Controllers\Home->insertion()
+#9 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\rewrite.php(44): require_once('C:\\wamp64\\www\\c...')
+#15 {main}
+CRITICAL - 2024-09-02 13:41:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Champ 'created_at' inconnu dans field list
+[Method: POST, Route: ajout]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Home.php(30): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 13:41:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Champ 'created_at' inconnu dans field list
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:41:46\', \'2024-09-02 13:41:46\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:41:46\', \'2024-09-02 13:41:46\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Home.php(30): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 13:41:46 --> [Caused by] mysqli_sql_exception: Champ 'created_at' inconnu dans field list
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:41:46\', \'2024-09-02 13:41:46\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:41:46\', \'2024-09-02 13:41:46\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:41:46\', \'2024-09-02 13:41:46\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Home.php(30): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+INFO - 2024-09-02 13:41:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-02 13:41:54 --> mysqli_sql_exception: Champ 'created_at' inconnu dans field list in C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\app\Controllers\Home.php(30): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(933): App\Controllers\Home->insertion()
+#9 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\rewrite.php(44): require_once('C:\\wamp64\\www\\c...')
+#15 {main}
+CRITICAL - 2024-09-02 13:41:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Champ 'created_at' inconnu dans field list
+[Method: POST, Route: ajout]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Home.php(30): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 13:41:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Champ 'created_at' inconnu dans field list
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:41:54\', \'2024-09-02 13:41:54\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:41:54\', \'2024-09-02 13:41:54\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Home.php(30): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 13:41:54 --> [Caused by] mysqli_sql_exception: Champ 'created_at' inconnu dans field list
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:41:54\', \'2024-09-02 13:41:54\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:41:54\', \'2024-09-02 13:41:54\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:41:54\', \'2024-09-02 13:41:54\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Home.php(30): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+ERROR - 2024-09-02 13:47:29 --> mysqli_sql_exception: Champ 'created_at' inconnu dans field list in C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\app\Controllers\Home.php(30): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(933): App\Controllers\Home->insertion()
+#9 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\rewrite.php(44): require_once('C:\\wamp64\\www\\c...')
+#15 {main}
+CRITICAL - 2024-09-02 13:47:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Champ 'created_at' inconnu dans field list
+[Method: POST, Route: ajout]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Home.php(30): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 13:47:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Champ 'created_at' inconnu dans field list
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:47:29\', \'2024-09-02 13:47:29\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:47:29\', \'2024-09-02 13:47:29\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Home.php(30): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 13:47:29 --> [Caused by] mysqli_sql_exception: Champ 'created_at' inconnu dans field list
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:47:29\', \'2024-09-02 13:47:29\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:47:29\', \'2024-09-02 13:47:29\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 13:47:29\', \'2024-09-02 13:47:29\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Home.php(30): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+ERROR - 2024-09-02 14:06:30 --> mysqli_sql_exception: Champ 'created_at' inconnu dans field list in C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\app\Controllers\Home.php(43): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(933): App\Controllers\Home->insertion()
+#9 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\rewrite.php(44): require_once('C:\\wamp64\\www\\c...')
+#15 {main}
+CRITICAL - 2024-09-02 14:06:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Champ 'created_at' inconnu dans field list
+[Method: POST, Route: ajout]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Home.php(43): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 14:06:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Champ 'created_at' inconnu dans field list
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 14:06:30\', \'2024-09-02 14:06:30\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 14:06:30\', \'2024-09-02 14:06:30\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Home.php(43): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 14:06:30 --> [Caused by] mysqli_sql_exception: Champ 'created_at' inconnu dans field list
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 14:06:30\', \'2024-09-02 14:06:30\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 14:06:30\', \'2024-09-02 14:06:30\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'rakoto\', \'rakoto@gmail.com\', \'rak\', \'2024-09-02 14:06:30\', \'2024-09-02 14:06:30\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Home.php(43): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+INFO - 2024-09-02 14:06:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-02 14:07:23 --> mysqli_sql_exception: Champ 'created_at' inconnu dans field list in C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\app\Controllers\Home.php(43): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(933): App\Controllers\Home->insertion()
+#9 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\rewrite.php(44): require_once('C:\\wamp64\\www\\c...')
+#15 {main}
+CRITICAL - 2024-09-02 14:07:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Champ 'created_at' inconnu dans field list
+[Method: POST, Route: ajout]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Home.php(43): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 14:07:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Champ 'created_at' inconnu dans field list
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'hubs\', \'hubs@gmail.com\', \'wxcv\', \'2024-09-02 14:07:23\', \'2024-09-02 14:07:23\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'hubs\', \'hubs@gmail.com\', \'wxcv\', \'2024-09-02 14:07:23\', \'2024-09-02 14:07:23\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Home.php(43): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 14:07:23 --> [Caused by] mysqli_sql_exception: Champ 'created_at' inconnu dans field list
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'hubs\', \'hubs@gmail.com\', \'wxcv\', \'2024-09-02 14:07:23\', \'2024-09-02 14:07:23\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'hubs\', \'hubs@gmail.com\', \'wxcv\', \'2024-09-02 14:07:23\', \'2024-09-02 14:07:23\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'hubs\', \'hubs@gmail.com\', \'wxcv\', \'2024-09-02 14:07:23\', \'2024-09-02 14:07:23\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Home.php(43): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+ERROR - 2024-09-02 14:15:27 --> mysqli_sql_exception: Champ 'created_at' inconnu dans field list in C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\app\Controllers\Home.php(44): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(933): App\Controllers\Home->insertion()
+#9 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\wamp64\www\codeigniter_Bibliotheque\Library_Management\system\rewrite.php(44): require_once('C:\\wamp64\\www\\c...')
+#15 {main}
+CRITICAL - 2024-09-02 14:15:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Champ 'created_at' inconnu dans field list
+[Method: POST, Route: ajout]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Home.php(44): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 14:15:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Champ 'created_at' inconnu dans field list
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'hubs\', \'hubs@gmail.com\', \'wxcv\', \'2024-09-02 14:15:27\', \'2024-09-02 14:15:27\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'hubs\', \'hubs@gmail.com\', \'wxcv\', \'2024-09-02 14:15:27\', \'2024-09-02 14:15:27\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Home.php(44): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 14:15:27 --> [Caused by] mysqli_sql_exception: Champ 'created_at' inconnu dans field list
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'hubs\', \'hubs@gmail.com\', \'wxcv\', \'2024-09-02 14:15:27\', \'2024-09-02 14:15:27\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'hubs\', \'hubs@gmail.com\', \'wxcv\', \'2024-09-02 14:15:27\', \'2024-09-02 14:15:27\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'hubs\', \'hubs@gmail.com\', \'wxcv\', \'2024-09-02 14:15:27\', \'2024-09-02 14:15:27\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES (:name:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Home.php(44): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insertion()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+INFO - 2024-09-02 14:16:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 14:16:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 14:20:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 14:20:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 14:21:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 14:21:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 14:21:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 14:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 14:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 14:26:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 14:28:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 14:30:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 14:30:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 14:31:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 14:31:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 14:32:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-02 15:12:36 --> ErrorException: Undefined variable $users
+[Method: GET, Route: HomePage]
+in APPPATH\Views\HomePage.php on line 10.
+ 1 APPPATH\Views\HomePage.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', 'C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\app\\Views\\HomePage.php', 10)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\app\\Views\\HomePage.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HomePage', [], true)
+ 5 APPPATH\Controllers\Home.php(16): view('HomePage')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->HomePage()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 15:12:47 --> ErrorException: Undefined variable $user
+[Method: GET, Route: HomePage]
+in APPPATH\Views\HomePage.php on line 10.
+ 1 APPPATH\Views\HomePage.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\app\\Views\\HomePage.php', 10)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\app\\Views\\HomePage.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HomePage', [], true)
+ 5 APPPATH\Controllers\Home.php(16): view('HomePage')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->HomePage()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 15:46:20 --> ErrorException: Undefined variable $user
+[Method: GET, Route: HomePage]
+in APPPATH\Views\HomePage.php on line 10.
+ 1 APPPATH\Views\HomePage.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\app\\Views\\HomePage.php', 10)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\app\\Views\\HomePage.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HomePage', [], true)
+ 5 APPPATH\Controllers\Home.php(16): view('HomePage')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->HomePage()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 15:46:22 --> ErrorException: Undefined variable $user
+[Method: GET, Route: HomePage]
+in APPPATH\Views\HomePage.php on line 10.
+ 1 APPPATH\Views\HomePage.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\app\\Views\\HomePage.php', 10)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\app\\Views\\HomePage.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HomePage', [], true)
+ 5 APPPATH\Controllers\Home.php(16): view('HomePage')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->HomePage()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-02 15:46:35 --> ErrorException: Undefined variable $users
+[Method: GET, Route: HomePage]
+in APPPATH\Views\HomePage.php on line 10.
+ 1 APPPATH\Views\HomePage.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', 'C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\app\\Views\\HomePage.php', 10)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\app\\Views\\HomePage.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HomePage', [], true)
+ 5 APPPATH\Controllers\Home.php(16): view('HomePage')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->HomePage()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+INFO - 2024-09-02 16:03:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 16:03:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 16:03:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 16:05:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 16:27:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 16:27:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 16:27:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

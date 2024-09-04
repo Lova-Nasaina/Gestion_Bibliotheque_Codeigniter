@@ -1,0 +1,185 @@
+INFO - 2024-09-03 11:17:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 12:42:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 12:42:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-03 12:42:56 --> ErrorException: Undefined variable $users
+[Method: GET, Route: HomePage/]
+in APPPATH\Views\HomePage.php on line 10.
+ 1 APPPATH\Views\HomePage.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', 'C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\app\\Views\\HomePage.php', 10)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\app\\Views\\HomePage.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HomePage', [], true)
+ 5 APPPATH\Controllers\Home.php(16): view('HomePage')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->HomePage()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-03 12:43:41 --> ErrorException: Undefined variable $user
+[Method: GET, Route: HomePage/]
+in APPPATH\Views\HomePage.php on line 10.
+ 1 APPPATH\Views\HomePage.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\app\\Views\\HomePage.php', 10)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\app\\Views\\HomePage.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HomePage', [], true)
+ 5 APPPATH\Controllers\Home.php(16): view('HomePage')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->HomePage()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+CRITICAL - 2024-09-03 12:43:42 --> ErrorException: Undefined variable $user
+[Method: GET, Route: HomePage/]
+in APPPATH\Views\HomePage.php on line 10.
+ 1 APPPATH\Views\HomePage.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\app\\Views\\HomePage.php', 10)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\app\\Views\\HomePage.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HomePage', [], true)
+ 5 APPPATH\Controllers\Home.php(16): view('HomePage')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->HomePage()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+INFO - 2024-09-03 12:45:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-03 12:45:18 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: HomePage/]
+in APPPATH\Views\HomePage.php on line 10.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HomePage', [], true)
+ 4 APPPATH\Controllers\Dashbord.php(24): view('HomePage', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashbord->dashbord()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashbord))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+INFO - 2024-09-03 12:45:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-03 12:45:20 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: HomePage/]
+in APPPATH\Views\HomePage.php on line 10.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HomePage', [], true)
+ 4 APPPATH\Controllers\Dashbord.php(24): view('HomePage', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashbord->dashbord()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashbord))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+INFO - 2024-09-03 12:45:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-03 12:45:22 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: HomePage/]
+in APPPATH\Views\HomePage.php on line 10.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HomePage', [], true)
+ 4 APPPATH\Controllers\Dashbord.php(24): view('HomePage', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashbord->dashbord()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashbord))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+INFO - 2024-09-03 12:46:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-03 12:46:46 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: HomePage/]
+in APPPATH\Views\HomePage.php on line 10.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HomePage', [], true)
+ 4 APPPATH\Controllers\Dashbord.php(24): view('HomePage', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashbord->dashbord()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashbord))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+INFO - 2024-09-03 12:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 12:52:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-03 12:52:39 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: HomePage/]
+in APPPATH\Views\HomePage.php on line 10.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HomePage', [], true)
+ 4 APPPATH\Controllers\Dashbord.php(24): view('HomePage', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashbord->dashbord()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashbord))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+INFO - 2024-09-03 12:53:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-03 12:53:38 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: HomePage/]
+in APPPATH\Views\HomePage.php on line 10.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HomePage', [], true)
+ 4 APPPATH\Controllers\Dashbord.php(24): view('HomePage', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashbord->dashbord()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashbord))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+INFO - 2024-09-03 12:53:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-03 12:53:39 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: HomePage/]
+in APPPATH\Views\HomePage.php on line 10.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HomePage', [], true)
+ 4 APPPATH\Controllers\Dashbord.php(24): view('HomePage', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashbord->dashbord()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashbord))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+INFO - 2024-09-03 12:54:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-03 12:54:03 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: HomePage/]
+in APPPATH\Views\HomePage.php on line 10.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HomePage', [], true)
+ 4 APPPATH\Controllers\Dashbord.php(24): view('HomePage', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashbord->dashbord()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashbord))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
+INFO - 2024-09-03 12:54:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-03 12:55:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-03 12:55:17 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: HomePage/]
+in APPPATH\Views\HomePage.php on line 11.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HomePage', [], true)
+ 4 APPPATH\Controllers\Dashbord.php(24): view('HomePage', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashbord->dashbord()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashbord))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\codeigniter_Bibliotheque\\Library_Management\\public\\index.php')
