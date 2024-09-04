@@ -17,14 +17,26 @@
                 <div class="card shadow-lg">
                     <div class="card-body p-5">
                         <h3 class="card-title text-center mb-4">Login</h3>
+
+
+                        <?php if (session()->getFlashdata('error')): ?>
+                            <div class="alert alert-danger">
+                                <?= session()->getFlashdata('error') ?>
+                            </div>
+                        <?php elseif(session()->getFlashdata('success')): ?>
+                            <div class="alert alert-success">
+                                <?= session()->getFlashdata('success') ?>
+                            </div>
+                        <?php endif; ?>
+
                         <form method="post" action="<?= base_url('authentificationLogin') ?>">
                             <div class="mb-3">
-                                <label for="email" class="form-label" >Email address</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password">
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
                             </div>
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-primary">Login</button>

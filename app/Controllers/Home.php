@@ -28,6 +28,9 @@ class Home extends BaseController
                 session()->set("userData", $user);
                 return redirect()->to("Dashbord");
             }
+        }else{
+            session()->setFlashdata("error", "email ou password incorrect");
+            return redirect()->to("/");
         }
     }
     
@@ -44,6 +47,7 @@ class Home extends BaseController
         $password = $this->request->getPost("password");
         $repeatpwd = $this->request->getPost("repeatpwd");
 
+
         if ($password === $repeatpwd){
             $userInfo = [
                 "name" => $this->request->getPost("name"),
@@ -59,8 +63,11 @@ class Home extends BaseController
             }
 
             $model->insert($userInfo);
-            session()->setFlashdata("success", "User créer");
+            session()->setFlashdata("success", "User créer avec succèe");
             return redirect("/");
+        }else{
+            session()->setFlashdata("error", "password non identique");
+            return redirect()->to("register");
         }
         
     }
