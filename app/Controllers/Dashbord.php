@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Models\UserModel;
+use App\Models\AdminModel;
 use CodeIgniter\Controller;
 use CodeIgniter\Model;
 
@@ -21,7 +22,7 @@ class Dashbord extends BaseController
         }
         
         $data["user"] = session()->get("userData");
-        return view('HomePage', $data);
+        return view('Dashbord', $data);
     }
 
 

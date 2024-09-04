@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Models\UserModel;
+use App\Models\AdminModel;
 use CodeIgniter\Controller;
 
 class Home extends BaseController
@@ -31,6 +32,36 @@ class Home extends BaseController
         }else{
             session()->setFlashdata("error", "email ou password incorrect");
             return redirect()->to("/");
+        }
+    }
+
+    public function adminPage(): string
+    {
+        return view('loginPage/administrator');
+    }
+    
+    public function authentificationAdmin()
+    {
+        
+        $AdminInfo = [
+            "email" => $this->request->getPost("email"),
+            "code" => $this->request->getPost("security"),
+            "password" => $this->request->getPost("password"),
+        ];
+
+
+        $model = new AdminModel();
+        $Admin = $model->getAdminByEmail($AdminInfo["email"]);
+
+        if ($Admin){
+            if ($AdminInfo["password"] === $Admin["password"]){
+                session()->set("LoggedTrue", true);
+                session()->set("userData", $Admin);
+                return redirect()->to("Dashbord");
+            }
+        }else{
+            session()->setFlashdata("error", "email ou password incorrect");
+            return redirect()->to("adminPage");
         }
     }
     
