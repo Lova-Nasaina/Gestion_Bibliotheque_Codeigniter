@@ -7,8 +7,5 @@
 </head>
 <body>
     <h1>Dashbord</h1>
-    <h1>Bienvenue , <?= var_dump($user) ?></h1>
-    <p><?= $user[0] ?></p>
-    <?= die() ?>
 </body>
 </html>

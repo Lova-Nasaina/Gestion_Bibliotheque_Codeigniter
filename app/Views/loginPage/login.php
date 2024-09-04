@@ -1,71 +1,44 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login de pro</title>
+    <title>Login</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="blueBg">
-            <div class="box signin">
-                <h2>Already Have an Account ?</h2>
-                <button class="signinBtn">Sign in</button>
-            </div>
-            <div class="box signup">
-                <h2>Don't Have an Account ?</h2>
-                <button class="signupBtn">Sign up</button>
-            </div>
-        </div>
-        <div class="formBx">
-            <div class="form signinForm">
-
-            <?php if (session()->getFlashdata('error')): ?>
-                <div class="alert alert-danger">
-                    <?= session()->getFlashdata('error') ?>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-lg">
+                    <div class="card-body p-5">
+                        <h3 class="card-title text-center mb-4">Login</h3>
+                        <form method="post" action="<?= base_url('authentificationLogin') ?>">
+                            <div class="mb-3">
+                                <label for="email" class="form-label" >Email address</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password">
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">Login</button>
+                            </div>
+                        </form>
+                        <div class="text-center mt-3">
+                            <p>Don't have an account? <a href="register">Sign Up</a></p>
+                        </div>
+                    </div>
                 </div>
-            <?php endif; ?>
-
-                <form method="post" action="<?= base_url('login')?>">
-                    <h3>Login </h3>
-                    <input type="text" placeholder="Username" name="name" required>
-                    <input type="password" placeholder="Password" name="password" required>
-                    <input type="submit" value="Login">
-                    <a href="#" class="forgot">Forgot Password</a>
-                </form>
-            </div>
-            <div class="form signupForm">
-            
-            <?php if (session()->getFlashdata('success')): ?>
-                <div class="color: green;">
-                    <?= session()->getFlashdata('success') ?>
-                </div>
-            
-            <?php endif; ?>
-            <?php if (session()->getFlashdata('error_to')): ?>
-                <div class="alert alert-danger">
-                    <?= session()->getFlashdata('error_to') ?>
-                </div>
-            <?php endif; ?>
-
-
-                <form method="post" action="<?=base_url('ajout')?>">
-                    <h3>Sign Up</h3>
-                    <input type="text" placeholder="name" name="name" required>
-                    <input type="text" placeholder="Email Address" name="email" required>
-                    <input type="password" placeholder="Password" name="password" required>
-                    <input type="password" placeholder="Confirm Password" name="repetepassword" required>
-                    <input type="submit" value="Register">
-                </form>
             </div>
         </div>
     </div>
-    <script src="js/script.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

@@ -7,12 +7,22 @@
     protected $table = 'users';
     protected $primaryKey = 'id';
     protected $allowedFields = ['name', 'email', 'password'];
-    protected $returnType = 'object';
+    // protected $returnType = 'object';
     // protected $useTimestamps = true;
 
-    public function getUserByUsername($name)
+    public function getUserByUsername(string $name)
     {
         return $this->where('name', $name)->first();
+    }
+
+    public function getUserById(int $id)
+    {
+      return $this->where('name', $id)->first();
+    }
+
+    public function getUserByEmail(string $email)
+    {
+      return $this->where('email', $email)->first();
     }
 
   }

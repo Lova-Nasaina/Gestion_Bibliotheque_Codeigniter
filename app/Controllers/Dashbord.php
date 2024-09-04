@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 
 class Dashbord extends BaseController
 {
-    public function dashbord()
+    public function index()
     {
         // verification si l'utilisateur est connecté
         // if (!session()->get('user_data')['id'] || session()->get('user_id') != $userId)
@@ -15,12 +15,12 @@ class Dashbord extends BaseController
         //     return redirect()->to('/')->with('error', 'Accès refusé. Veuillez vous connecter');
         // }
 
-        if (!session()->get('logged_in'))
+        if (!session()->get('LoggedTrue'))
         {
             return redirect()->to('/')->with('error', 'Accès refusé. Veuillez vous connecter');
         }
         
-        $data["user"] = session()->get("user_data");
+        $data["user"] = session()->get("userData");
         return view('HomePage', $data);
     }
 
