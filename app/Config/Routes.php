@@ -26,6 +26,8 @@ $routes->get('books', 'books::index');
 
 $routes->post('AddLivre', 'Admin::AddLivre');
 
+$routes->get('show/(:num)', 'Books::show/$1');
+
 
 
 

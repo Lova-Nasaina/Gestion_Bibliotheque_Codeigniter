@@ -1,0 +1,39 @@
+.anime-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.anime-card img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.anime-info {
+    margin-left: 15px;
+}
+
+.rating {
+    color: #e74c3c;
+}
+
+.rating-stars {
+    color: #f39c12;
+}
+
+.vf-badge {
+    background-color: #e74c3c;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+
+.date-pill {
+    background-color: #ddd;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin-right: 5px;
+}

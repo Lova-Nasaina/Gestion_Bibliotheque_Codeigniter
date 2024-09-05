@@ -1,0 +1,54 @@
+.anime-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    /* background-color: #f9f9f9; */
+    background-color: red;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.anime-card img {
+    width: 400px; /* Taille de l'image augmentée à grande échelle */
+    height: auto;
+    border-radius: 5px;
+}
+
+.anime-info {
+    margin-left: 30px;
+    flex-grow: 1;
+}
+
+.anime-info h5 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+}
+
+.rating {
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+.rating-stars {
+    color: #f39c12;
+    font-size: 1.4rem;
+}
+
+.vf-badge {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.date-pill {
+    background-color: #ddd;
+    border-radius: 20px;
+    padding: 8px 12px;
+    font-size: 16px;
+    margin-right: 5px;
+    display: inline-block;
+}

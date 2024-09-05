@@ -6,7 +6,7 @@
   {
     protected $table = 'books';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['title', 'author', 'Descriptions', 'id_admin'];
+    protected $allowedFields = ['title', 'author', 'Descriptions', 'id_admin', 'profil'];
 
   }
 

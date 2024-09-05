@@ -55,6 +55,7 @@
         </div>
     </div>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/alert.js"></script>
 </body>
 
 </html>

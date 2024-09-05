@@ -1,0 +1,1 @@
+alert("admin email : admin@gmail.com \n password : admin \n code : SECURITY");

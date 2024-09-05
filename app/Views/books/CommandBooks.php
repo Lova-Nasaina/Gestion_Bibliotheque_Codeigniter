@@ -17,17 +17,17 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
+                    <li class="nav-item ">
                         <form class="d-flex">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-light" type="submit">Search</button>
                         </form>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="bi bi-person-circle"></i> Profile</a>
+                        <!-- <a class="nav-link" href="#"><i class="bi bi-person-circle"></i> Profile</a> -->
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="bi bi-box-arrow-right"></i> Logout</a>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="<?= base_url('logout') ?>"><i class="bi bi-box-arrow-right"></i> Logout</a>
                     </li>
                 </ul>
             </div>
@@ -74,6 +74,24 @@
                         <td>Jean Dupont</td>
                         <td>Le Monde de Sophie</td>
                         <td>2 jours</td>
+                        <td class="text-center">
+                            <button type="button" class="btn btn-success btn-sm">Valider</button>
+                            <button type="button" class="btn btn-danger btn-sm">Supprimer</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Marie Legrand</td>
+                        <td>Les Misérables</td>
+                        <td>5 jours</td>
+                        <td class="text-center">
+                            <button type="button" class="btn btn-success btn-sm">Valider</button>
+                            <button type="button" class="btn btn-danger btn-sm">Supprimer</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Marie Legrand</td>
+                        <td>Les Misérables</td>
+                        <td>5 jours</td>
                         <td class="text-center">
                             <button type="button" class="btn btn-success btn-sm">Valider</button>
                             <button type="button" class="btn btn-danger btn-sm">Supprimer</button>

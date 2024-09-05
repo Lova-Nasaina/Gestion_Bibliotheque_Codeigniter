@@ -27,7 +27,7 @@
                         <a class="nav-link" href="#"><i class="bi bi-person-circle"></i> Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="bi bi-box-arrow-right"></i> Logout</a>
+                        <a class="nav-link" href="<?= base_url('logout') ?>"><i class="bi bi-box-arrow-right"></i> Logout</a>
                     </li>
                 </ul>
             </div>

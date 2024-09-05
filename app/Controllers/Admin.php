@@ -21,12 +21,19 @@ class Admin extends BaseController
 
     public function AddLivre()
     {
-        
+        $picture = $this->request->getFile("sary");
+        // var_dump($picture);
+        // die();
+
+        $name = $picture->getName();
         $data = [
             "title" => $this->request->getPost("title"),
             "author" => $this->request->getPost("author"),
             "Descriptions" => $this->request->getPost("Descriptions"),
+            "profil" => '/'. $name,
         ];
+
+        $picture->move(ROOTPATH . "/public/sary/", $name);
 
 
         $model = new BookModel();

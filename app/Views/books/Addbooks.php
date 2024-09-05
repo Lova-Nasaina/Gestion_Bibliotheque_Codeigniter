@@ -26,10 +26,10 @@
                         </form>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="bi bi-person-circle"></i> Profile</a>
+                        <!-- <a class="nav-link" href="#"><i class="bi bi-person-circle"></i> Profile</a> -->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="bi bi-box-arrow-right"></i> Logout</a>
+                        <a class="nav-link" href="<?= base_url('logout') ?>"><i class="bi bi-box-arrow-right"></i> Logout</a>
                     </li>
                 </ul>
             </div>
@@ -64,8 +64,8 @@
                     </div>
                 </div> -->
                 <div class="container mt-5">
-                    <div class="card shadow-lg">
-                        <div class="card-header bg-primary text-white text-center">
+                    <div class="card shadow-lg ">
+                        <div class="card-header bg-primary text-white text-center bg-dark">
                             <h3>Ajouter un Livre</h3>
                         </div>
                         <div class="card-body">
@@ -77,7 +77,7 @@
                                 </div>
                             <?php endif; ?>
 
-                            <form method="post" action="<?= base_url('AddLivre') ?>">
+                            <form method="post" action="<?= base_url('AddLivre') ?>" enctype="multipart/form-data">
                                 <!-- Titre -->
                                 <div class="mb-3">
                                     <label for="title" class="form-label">Titre du Livre</label>
@@ -95,10 +95,19 @@
                                     <label for="author" class="form-label">Auteur</label>
                                     <input type="text" class="form-control" id="author" name="author" placeholder="Entrez le nom de l'auteur" required>
                                 </div>
+                                <div class="mb-3">
+                                
+                                
+                                        
+                                            <label for="formFile" class="form-label">Choisir un fichier</label>
+                                            <input class="form-control" type="file"  name="sary" id="formFile" >
+                                        
+                                
+                                </div>
 
                                 <!-- Bouton de soumission -->
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-success w-50">Ajouter</button>
+                                    <button type="submit" class="btn btn-primary w-50">Ajouter</button>
                                 </div>
                             </form>
                         </div>
