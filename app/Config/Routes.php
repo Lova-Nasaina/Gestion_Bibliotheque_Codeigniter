@@ -15,11 +15,16 @@ $routes->post('authentificationRegister', 'Home::authentificationRegister');
 $routes->post('authentificationLogin', 'Home::authentificationLogin');
 
 
+$routes->get('AddBook', 'Admin::AddBooks');
+$routes->get('ViewsCommand', 'Admin::ViewsCommand');
+
 $routes->get("Dashbord", 'Dashbord::index');
 
 
 $routes->get('books', 'books::index');
 
+
+$routes->post('AddLivre', 'Admin::AddLivre');
 
 
 
