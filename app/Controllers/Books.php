@@ -19,6 +19,7 @@ class Books extends BaseController
         $builder->select('books.id, books.title, books.profil, books.author, books.Descriptions');
         $builder->select("CASE WHEN books_command.id_books IS NOT NULL THEN 'déja Commandé' ELSE 'Disponible' END AS statut_commande", false);
         $builder->join('books_command', 'books_command.id_books = books.id', 'left');
+        $builder->orderBy('books.id', 'DESC');
 
         // Recuperation des resultats
         $query = $builder->get();
